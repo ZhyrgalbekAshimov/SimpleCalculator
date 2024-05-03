@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Scanner;
 
 class Main {
     public static String calc(String input) {
@@ -55,6 +56,25 @@ class Main {
     }
 
     public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        String input;
+        String output;
+
+        while (true) {
+            System.out.println("Input:");
+            input = scanner.nextLine();
+
+            System.out.println("Output:");
+            try {
+                output = calc(input);
+                System.out.println(output + "\n");
+            } catch (Exception exception) {
+                System.out.println(exception + "\n");
+            }
+
+        }
 
 
     }
